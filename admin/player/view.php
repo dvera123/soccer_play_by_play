@@ -18,6 +18,7 @@ require "../util/Connection.php";
                     <th>name</th>
                     <th>number</th>
                     <th>Is Staple</th>
+                    <th>Team</th>
                 </tr>
             </thead>
             <?php
@@ -31,6 +32,7 @@ require "../util/Connection.php";
                      echo '<td>'.$row['name'].'</td>';
                      echo '<td>'.$row['number'].'</td>';
                      echo '<td>'.$row['is_staple'].'</td>';
+                     echo '<td>'.$row['team'].'</td>';
                      echo '</tr>';
                  }
             ?>
