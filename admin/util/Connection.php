@@ -1,5 +1,5 @@
 <?php
-const  SERVER = "localhost";
+const SERVER = "localhost";
 const USER = "root";
 const PASS = "root";
 const DB = "soccer_play_by_play";
