@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-require "../util/Connection.php";
+require "./actions/GetPlayer.php";
 ?>
 <html>
     <head> 
@@ -22,10 +22,8 @@ require "../util/Connection.php";
                 </tr>
             </thead>
             <?php
-                $con = getConnection();
-
-                $result = mysqli_query($con, 
-                    "CALL sp_get_players") or die("Query fail: " . mysqli_error());
+               
+                $result = getPlayers();
 
                  while ($row = mysqli_fetch_array($result)){  
                      echo '<tr>';

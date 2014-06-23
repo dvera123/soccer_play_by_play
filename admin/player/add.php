@@ -11,7 +11,7 @@ and open the template in the editor.
     </head>
     <body>
         <h1>Insert Player</h1>
-        <form method="POST" action="util/InsertPlayer.php">
+        <form method="POST" action="actions/InsertPlayer.php">
             <input type="text" name="name"/>
             <input type="text" name="number"/>
             <select name="is_staple">
