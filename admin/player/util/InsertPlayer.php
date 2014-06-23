@@ -8,8 +8,7 @@ $number = mysqli_real_escape_string($con, $_POST['number']);
 $is_staple = mysqli_real_escape_string($con, $_POST['is_staple']);
 $team = mysqli_real_escape_string($con, $_POST['team']);
 
-$sql="INSERT INTO player (name, number, is_staple, team_id)
-VALUES ('$name', $number, $is_staple, '$team')";
+$sql="call sp_set_player ('$name', $number, $is_staple, '$team')";
 
 if (!mysqli_query($con,$sql)) {
   die('Error: ' . mysqli_error($con));
