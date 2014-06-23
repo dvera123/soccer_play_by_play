@@ -3,22 +3,38 @@
 require "../util/Connection.php";
 ?>
 <html>
-    <head>
-        <meta charset="UTF-8">
+    <head> 
+        <?php 
+            include "../../global/header/header.php"
+        ?>
         <title></title>
     </head>
     <body>
         <h1>Players</h1>
-        <?php
-            $con = getConnection();
-            
-            $result = mysqli_query($con, 
-                "CALL sp_get_players") or die("Query fail: " . mysqli_error());
+        <table>
+            <tbody>
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>number</th>
+                    <th>Is Staple</th>
+                </tr>
+            </thead>
+            <?php
+                $con = getConnection();
 
-             //loop the result set
-             while ($row = mysqli_fetch_array($result)){   
-                 echo $row['name']; 
-             }
-        ?>
+                $result = mysqli_query($con, 
+                    "CALL sp_get_players") or die("Query fail: " . mysqli_error());
+
+                 while ($row = mysqli_fetch_array($result)){  
+                     echo '<tr>';
+                     echo '<td>'.$row['name'].'</td>';
+                     echo '<td>'.$row['number'].'</td>';
+                     echo '<td>'.$row['is_staple'].'</td>';
+                     echo '</tr>';
+                 }
+            ?>
+            </tbody>
+        </table>
     </body>
 </html>
