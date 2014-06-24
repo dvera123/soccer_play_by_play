@@ -31,6 +31,7 @@ require "./actions/GetPlayer.php";
                      echo '<td>'.$row['number'].'</td>';
                      echo '<td>'.$row['is_staple'].'</td>';
                      echo '<td>'.$row['team'].'</td>';
+                     echo '<td><a href="update.php?player_id='.$row['id'].'">update</a></td>';
                      echo '</tr>';
                  }
             ?>
