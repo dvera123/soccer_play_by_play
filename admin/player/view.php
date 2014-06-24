@@ -11,6 +11,7 @@ require_once(dirname(__FILE__) . './actions/GetPlayer.php');
     </head>
     <body>
         <h1>Players</h1>
+        <a href="/soccer_play_by_play/admin/player/add.php">add new player</a>
         <table>
             <tbody>
             <thead>
