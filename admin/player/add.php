@@ -12,13 +12,13 @@ and open the template in the editor.
     <body>
         <h1>Insert Player</h1>
         <form method="POST" action="actions/InsertPlayer.php">
-            <input type="text" name="name"/>
-            <input type="text" name="number"/>
-            <select name="is_staple">
+            <label>Name:</label><input type="text" name="name"/>
+            <label>Number:</label><input type="text" name="number"/>
+            <label>Is Staple:</label><select name="is_staple">
                 <option value="0">no</option>
                 <option value="1">yes</option>
             </select>
-            <input type="text" name="team"/>
+            <label>Team:</label><input type="text" name="team"/>
             <input type="submit"/>
         </form>
         <?php

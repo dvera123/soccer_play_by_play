@@ -16,4 +16,4 @@ if (!mysqli_query($con,$sql)) {
 echo "1 record added";
 
 mysqli_close($con);
-
+header('Location: http://'.$_SERVER['SERVER_NAME'].'/soccer_play_by_play/admin/player/view.php');
