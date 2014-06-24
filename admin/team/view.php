@@ -4,9 +4,7 @@ require "../util/Connection.php";
 ?>
 <html>
     <head>
-        <?php 
-            include "../../global/header/header.php"
-        ?>
+        <meta charset="UTF-8">
         <title></title>
     </head>
     <body>

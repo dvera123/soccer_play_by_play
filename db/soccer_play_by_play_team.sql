@@ -18,32 +18,27 @@ USE `soccer_play_by_play`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `player`
+-- Table structure for table `team`
 --
 
-DROP TABLE IF EXISTS `player`;
+DROP TABLE IF EXISTS `team`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `player` (
+CREATE TABLE `team` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) DEFAULT NULL,
-  `number` int(11) DEFAULT NULL,
-  `is_staple` tinyint(4) DEFAULT '0',
-  `team_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `team_id_idx` (`team_id`),
-  CONSTRAINT `team_id` FOREIGN KEY (`team_id`) REFERENCES `team` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `player`
+-- Dumping data for table `team`
 --
 
-LOCK TABLES `player` WRITE;
-/*!40000 ALTER TABLE `player` DISABLE KEYS */;
-INSERT INTO `player` VALUES (1,'player 1',10,1,1),(2,'player 2',11,1,1),(3,'player 3',99,0,2),(4,'player 4',98,1,1),(5,'player 5',4,0,2),(6,'player 6',33,0,2);
-/*!40000 ALTER TABLE `player` ENABLE KEYS */;
+LOCK TABLES `team` WRITE;
+/*!40000 ALTER TABLE `team` DISABLE KEYS */;
+INSERT INTO `team` VALUES (1,'Costa Rica'),(2,'Uruguay'),(3,'Inglaterra');
+/*!40000 ALTER TABLE `team` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

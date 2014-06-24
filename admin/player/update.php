@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-require "./actions/GetPlayerById.php";
+require_once(dirname(__FILE__) . './actions/GetPlayerById.php');
 ?>
 <html>
     <head>
@@ -17,6 +17,8 @@ require "./actions/GetPlayerById.php";
                     'CALL sp_get_player_by_id('.$p_id.')') or die("Query fail: " . mysqli_error());
 
                  while ($row = mysqli_fetch_array($result)){  
+                     echo '<input type="hidden" name="id" value="'.$row['id'].'"/>';
+                     echo '<input type="hidden" name="team" value="'.$row['team_id'].'"/>';
                      echo '<input type="text" name="name" value="'.$row['name'].'"/>';
                      echo '<input type="text" name="number" value="'.$row['number'].'"/>';
                      echo '<select name="is_staple">';

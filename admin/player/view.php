@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-require "./actions/GetPlayer.php";
+require_once(dirname(__FILE__) . './actions/GetPlayer.php');
 ?>
 <html>
     <head> 
