@@ -2,11 +2,11 @@
 
 include '../util/Connection.php';
 
-function getPlayerById($p_id){
+function getTeamById($t_id){
     $con = getConnection();
 
      $results = mysqli_query($con, 
-        'CALL sp_get_player_by_id('.$p_id.')') or die('Query fail: ' . mysqli_error());
+        'CALL sp_get_team_by_id('.$t_id.')') or die('ery fail: ' . mysqli_error());
     
      mysqli_close($con);
     

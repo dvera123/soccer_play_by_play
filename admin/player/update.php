@@ -13,8 +13,7 @@ require './actions/GetPlayerById.php';
             <?php
                 $con = getConnection();
                 $p_id = $_GET['player_id'];
-                $result = mysqli_query($con, 
-                    'CALL sp_get_player_by_id('.$p_id.')') or die("Query fail: " . mysqli_error());
+                $result = getPlayerById($p_id);
 
                  while ($row = mysqli_fetch_array($result)){  
                      echo '<input type="hidden" name="id" value="'.$row['id'].'"/>';
