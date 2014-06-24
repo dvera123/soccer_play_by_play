@@ -32,6 +32,7 @@ require_once(dirname(__FILE__) . './actions/GetPlayer.php');
                      echo '<td>'.$row['is_staple'].'</td>';
                      echo '<td>'.$row['team'].'</td>';
                      echo '<td><a href="update.php?player_id='.$row['id'].'">update</a></td>';
+                     echo '<td><a href="delete.php?player_id='.$row['id'].'">delete</a></td>';
                      echo '</tr>';
                  }
             ?>
